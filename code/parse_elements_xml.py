@@ -22,7 +22,8 @@ C = 1600 #IMG Lenght
 D = 900 #IMG Height
 
 str_labels_c = []
-    
+
+# Iterate in each files
 for i in range(1, file_count+1):
     # open & read files
     infile = open("VOC2018/Annotations/"+str(i)+".xml","r") 
