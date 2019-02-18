@@ -1,0 +1,5 @@
+{"file": "1.jpg", "image_size": [{"width": 1600, "height": 900, "depth": 3}], 
+            "annotations": [
+            {"class_id": 0, "top": 227, "left": 779, "width": 290, "height": 585}], 
+            "categories": [
+                {"class_id": 1, "name": "faon"}]}
