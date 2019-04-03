@@ -10,7 +10,8 @@ http://www.immersivelimit.com/tutorials/create-coco-annotations-from-scratch/#co
 
 Install python 3.6 
 
-Download labelImg
+Download labelImg to annotate your images 
+
 https://github.com/tzutalin/labelImg
 
 ### Create COCO Dataset
