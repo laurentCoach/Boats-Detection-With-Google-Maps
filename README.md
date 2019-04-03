@@ -1,4 +1,4 @@
-# object_detection
+# object_detection with AWS Sagemaker COCO Dataset
 
 ### AWS SageMaker NoteBook :
 https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb
