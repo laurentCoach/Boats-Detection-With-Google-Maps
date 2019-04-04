@@ -1,5 +1,6 @@
 # Laurent Cesaro
 # Data Preparation to use object detection with AWS SageMaker
+# This code works if only one annotation in XML File
 
 
 # https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_recordio_format.ipynb
