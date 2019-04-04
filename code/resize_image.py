@@ -9,7 +9,7 @@ import cv2
 import os
 import time
 os.getcwd()
-train = "D:/Users/S06077/Downloads/tl_data/training/JPEGImages/"
+train = "folder/JPEGImages/"
 
 # dimension images
 dim  = (300, 300) 
