@@ -1,28 +1,31 @@
 #Autor : Laurent Cesaro
 
+# Resize all image in folder
+# Dim 300x300
 
 # Load library
 import cv2
  
-# load the image and show it
-image = cv2.imread("image.jpg", cv2.IMREAD_COLOR)
+import os
+import time
+os.getcwd()
+train = "D:/Users/S06077/Downloads/tl_data/training/JPEGImages/"
 
-# If print(image) == None --> problem
-print(image)
+# dimension images
+dim  = (300, 300) 
 
-r = 100.0 / image.shape[1]
-# Here resize width
-# Specify your dimension
-# x, y
-dim = (100, int(image.shape[0] * r))
-#dim  = (224, 224) 
+for i, filename in enumerate(os.listdir(train)):
+    i = i + 1
+    print(i)
 
-# perform the actual resizing of the image and show it
-resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+    time.sleep(1) #if no timesleep, bug in rename file
+    
+    # load the image and show it
+    image = cv2.imread("folder/GE_" + str(i) + ".jpg", cv2.IMREAD_COLOR)
 
-# Save image
-cv2.imwrite('image_save.jpg', resized)
 
-# Show image
-cv2.imshow("resized", resized)
-cv2.waitKey(0)
+    # perform the actual resizing of the image and show it
+    resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+    
+    # Save image
+    cv2.imwrite('folder_target/' + str(i) + '.png', resized)
