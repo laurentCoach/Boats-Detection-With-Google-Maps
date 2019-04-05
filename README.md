@@ -12,7 +12,7 @@ Install python 3.6
 
 Download labelImg to annotate your images 
 
-https://github.com/tzutalin/labelImg
+https://github.com/tzutalin/labelImg or http://tzutalin.github.io/labelImg/
 
 ### Create COCO Dataset
 
