@@ -61,17 +61,8 @@ for i in range(1, file_count+1):
     # IMG path
     str_path = ["VOC2018/JPEGImages/"+str(i)+".jpg"]
     str_header = [str(A),str(B),str(C),str(D)]
-    #str_labels = str(i) +'    '+ str(A) +'    '+ str(B) +'    '+ class_id +'    '+ xmin +'    '+ ymin +'    '+ xmax +'    '+ ymax +'    '+str_path
-    #str_labels =  class_id +'    '+ xmin +'    '+ ymin +'    '+ xmax +'    '+ ymax
     str_labels =  [class_id,xmin,ymin,xmax,ymax]
     
     line = '\t'.join(str_idx + str_header + str_labels + str_path)
     str_labels_c.append(line)
-
-
-# Write LST File    
-with open('train.lst', 'w') as f:
-    for item in str_labels_c:
-        print("ok")
-        f.write("%s\n" % item)
-        
+     
