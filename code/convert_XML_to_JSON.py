@@ -1,5 +1,5 @@
 # Laurent Cesaro
-# Data Preparation (COCO DATASET) to use object detection with AWS SageMaker
+# Data Preparation to use object detection with AWS SageMaker
 
 
 # https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_recordio_format.ipynb
@@ -25,7 +25,7 @@ height = 300 #IMG Height
 
 #str_labels_c = []
     
-for i in range(0, file_count):
+for i in range(1234, file_count+1234):
 #for i in range(1, file_count+1):
     xmin_tab = []
     ymin_tab = []
@@ -66,7 +66,9 @@ for i in range(0, file_count):
         ymax = int(ymax.get_text())
         ymax_tab.append(ymax)
         
-    name = str(i)
+    name = str(i)+'.jpg'
+    name_json = str(i)
+    # If several annotations
     if len(xmin_tab) > 1:
         annotation_tab = []
         annotation = """{"class_id": 0, "top": %s, "left": %s, "width": %s, "height": %s},"""
@@ -111,6 +113,7 @@ for i in range(0, file_count):
                 "categories": [
                     %s]}""" % (name, annotation_str, categories_str)
    
+    # If only one annotation
     else:     
         # Compute x, y, width, heght
         top = ymin
@@ -126,7 +129,7 @@ for i in range(0, file_count):
         #json_data = json.dumps(data)
         print("parse data ok")
     
-    name_file = "ship_detector/train_annotation/"+name+".json"
+    name_file = "ship_detector/train_annotation/"+name_json+".json"
     with open(name_file, 'w') as outfile:
         outfile.write(data)
         
