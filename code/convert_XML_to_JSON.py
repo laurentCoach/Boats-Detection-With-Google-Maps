@@ -5,7 +5,8 @@
 # https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_recordio_format.ipynb
 # https://gluon-cv.mxnet.io/build/examples_datasets/detection_custom.html#lst-label-for-gluoncv-and-mxnet
 
-#Parse XML elements to JSON
+# Parse XML elements to JSON
+# This code works for only one object to detect
     
 # import library
 from bs4 import BeautifulSoup
