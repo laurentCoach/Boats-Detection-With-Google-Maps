@@ -28,8 +28,6 @@ while(True):
     # capture screen
     screen = ig.grab(bbox=(x,y,x+300,y+300))
     screen = np.array(screen)
-    #print('Loop took {} seconds',format(time.time()-last_time))
-    # show camera
     
     # save img to png for prediction
     img = Image.fromarray(screen)   
@@ -42,7 +40,7 @@ while(True):
 
     bbox = json.loads(output)
     print(bbox)
-    #time.sleep(1)
+
     if not bbox:
         continue
     else:
