@@ -50,5 +50,10 @@ Create an instance with a notebook : https://github.com/awslabs/amazon-sagemaker
 
 Train your model !
 
-### Results
+### Results in AWS Sagemaker
 ![Image of Yaktocat](https://github.com/laurentCoach/Boats-Detection-With-Google-Maps/blob/master/img/plot2.png)
+
+### Deploy locally
+Convert your model to deploy mode : https://github.com/zhreshold/mxnet-ssd#convert-model-to-deploy-mode
+
+Lauch your model with mxnet-model-server : https://github.com/awslabs/mxnet-model-server/tree/master/examples/ssd
