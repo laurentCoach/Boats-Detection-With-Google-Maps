@@ -14,26 +14,41 @@ Download labelImg to annotate your images
 
 https://github.com/tzutalin/labelImg or http://tzutalin.github.io/labelImg/
 
-### Create COCO Dataset
+### Images
+Image size : 300 or 512
 
-1 - Launch labelImg
-command prompt : python labelImg.py
+### Annotate your images
+Annotate your images with labelImg.
 
-2 - Annotate your images
+All annotations are in XML format. You need to convert your XML to JSON. (Code : https://github.com/laurentCoach/Boats-Detection-With-Google-Maps/blob/master/code/convert_XML_to_JSON.py)
 
-3 - Parse XML elements to create json files. One json per image.
+The annotation file must have the same name as the corresponding image.
 
-4 - Create your s3 bucket
+### S3 storage
+In AWS create a bucket in s3 to store your JPG images and your annotations.
 
 bucket_name
----train
-   ---image.jpg 
----train_annotation
-   ---image.json 
----validation
-   ---val.jpg 
----validation_annotation
-   ---val.json
-   
-5 - Load your images (jpg) and annotations (json file) in your s3
 
+---train
+
+   ---image.jpg 
+   
+---train_annotation
+
+   ---image.json 
+   
+---validation
+
+   ---val.jpg 
+   
+---validation_annotation
+
+   ---val.json
+
+### AWS Sagemaker
+Create an instance with a notebook : https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb
+
+Train your model !
+
+### Results
+![Image of Yaktocat](https://github.com/laurentCoach/Boats-Detection-With-Google-Maps/blob/master/img/plot2.png)
