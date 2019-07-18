@@ -29,9 +29,9 @@ In AWS create a bucket in s3 to store your JPG images and your annotations.
 
 bucket_name
 
----train
+- ---train
 
-   ---image.jpg 
+   - ---image.jpg 
    
 ---train_annotation
 
