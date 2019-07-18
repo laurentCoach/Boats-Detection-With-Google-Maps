@@ -33,17 +33,17 @@ bucket_name
 
    - ---image.jpg 
    
----train_annotation
+- ---train_annotation
 
-   ---image.json 
+   - ---image.json 
    
----validation
+- ---validation
 
-   ---val.jpg 
+   - ---val.jpg 
    
----validation_annotation
+- ---validation_annotation
 
-   ---val.json
+   - ---val.json
 
 ### AWS Sagemaker
 Create an instance with a notebook : https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb
